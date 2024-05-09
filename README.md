@@ -1,6 +1,6 @@
 # Lista de tareas con React + TypeScript + Vite
 
-Este proyecto de Lista de Tareas con React y Typescript.
+Este proyecto de Lista de Tareas con React y Typescript 5.2.2
 
 Desarrollado con la última version de Vite, React 18.2.0 y Typescript .
 
@@ -11,8 +11,8 @@ Para probar o ejecutar la aplicación puede seguir las siguentes indicaciones:
 
 - Descargar o clonar el código del repositorio
 - Navegar hasta la carpeta del repositorio `lista-tareas` desde Terrminal
-- Ejecutar el comando ``npm install` para installar los módulos de Node
+- Ejecutar el comando `npm install` para installar los módulos de Node
 - Ejecutar el comando `npm run dev` para lanzar la plaicación
-- Abrir en el navegador la dirección [http://localhost:5173]([http://localhost:5173)
+- Abrir en el navegador la dirección [localhost:5173]([http://localhost:5173).
 
 
