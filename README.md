@@ -13,6 +13,6 @@ Para probar o ejecutar la aplicación puede seguir las siguentes indicaciones:
 - Navegar hasta la carpeta del repositorio `lista-tareas` desde Terrminal
 - Ejecutar el comando `npm install` para installar los módulos de Node
 - Ejecutar el comando `npm run dev` para lanzar la plaicación
-- Abrir en el navegador la dirección [localhost:5173]([http://localhost:5173).
+- Abrir en el navegador la dirección [localhost:5173](http://localhost:5173).
 
 
