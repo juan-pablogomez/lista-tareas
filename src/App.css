@@ -1,0 +1,168 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  width: 800px;
+  margin: 0 auto;
+
+  form {
+    display: flex;
+    justify-content: space-around;
+
+    input {
+      width: 80%;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+    }
+
+    button {
+      background-color: #007acc;
+      font-weight: 600;
+      margin: auto 10px;
+      padding: 18px;
+      min-width: 20%;
+    }
+  }
+
+  /*  TASK */
+  ul {
+    background-color: rgb(75, 72, 72);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      .task-container {
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+        position: relative;
+        padding: auto 15px;
+        transition: all ease 300ms;
+
+
+        .checkbox-container {
+          display: block;
+          position: relative;
+          cursor: pointer;
+          font-size: 1.5rem;
+          user-select: none;
+
+          .checkbox-input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+
+          .checkbox-span {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 1.3em;
+            width: 1.3em;
+            background-color: #ccc;
+            border-radius: 50%;
+            transition: 300ms;
+          }
+        }
+
+        .checkbox-container .checkbox-input:checked~.checkbox-span {
+          background-color: green;
+          border-radius: .5rem;
+          animation: pulse 300ms ease-in-out;
+        }
+
+        .checkbox-span:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        .checkbox-container .checkbox-input:checked~.checkbox-span:after {
+          display: block;
+        }
+
+        .checkbox-container .checkbox-span:after {
+          left: 0.45em;
+          top: 0.25em;
+          width: 0.25em;
+          height: 0.5em;
+          border: solid #E0E0E2;
+          border-width: 0 0.15em 0.15em 0;
+          transform: rotate(45deg);
+        }
+
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 green;
+            rotate: 20deg;
+          }
+
+          50% {
+            rotate: -20deg;
+          }
+
+          75% {
+            box-shadow: 0 0 0 10px green;
+          }
+
+          100% {
+            box-shadow: 0 0 0 13px green;
+            rotate: 0;
+          }
+        }
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .delete-btn {
+        background-color: transparent;
+        opacity: 0;
+        border: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all ease 300ms;
+
+        svg {
+          color: red;
+          width: 30px;
+        }
+
+        &:hover {
+          opacity: 1 !important;
+        }
+      }
+
+      &:hover {
+        .delete-btn {
+          opacity: 0.5;
+          border: none;
+        }
+      }
+    }
+
+    .task-completed {
+      p {
+        text-decoration: line-through 2px solid;
+      }
+    }
+  }
+}
